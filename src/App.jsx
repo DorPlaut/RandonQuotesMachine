@@ -15,7 +15,7 @@ let threeDcolor;
 
 function App() {
   // fatch data
-  const url = 'https://thesimpsonsquoteapi.glitch.me/quotes';
+  const url = 'https://space-quotes-api.onrender.com/api/V1/quotes/random';
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [quotes, setQuotes] = useState([]);
@@ -93,10 +93,7 @@ function App() {
               </>
             ) : (
               <>
-                <Quote
-                  text={quotes[0].quote}
-                  author={quotes[0].character}
-                ></Quote>
+                <Quote text={quotes.quote} author={quotes.author}></Quote>
               </>
             )}
             {isLoading ? (
@@ -106,8 +103,8 @@ function App() {
             ) : (
               <>
                 <Nav
-                  text={quotes[0].quote}
-                  author={quotes[0].character}
+                  text={quotes.quote}
+                  author={quotes.author}
                   getQuotes={getQuotes}
                   changeColors={changeColors}
                 ></Nav>
@@ -120,6 +117,10 @@ function App() {
             build by{' '}
             <a href="https://dor-plaut-home-page.netlify.app/" target="blank">
               Dor Plaut
+            </a>
+            {' - '}
+            <a href="https://space-quotes-api.onrender.com/" target="blank">
+              Chack out my free Space quotes API
             </a>
           </p>
         </div>
