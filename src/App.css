@@ -45,7 +45,8 @@ canvas {
 /* main container */
 .QuoteBox {
   padding: 0;
-  width: var(--pageWidth);
+  width: calc(100vw - 2rem);
+  max-width: var(--pageWidth);
   background: var(--seconderyColor);
   transition: 1s;
   animation: var(--animation);
@@ -173,17 +174,15 @@ canvas {
 
 /* madia quarrys */
 
-@media screen and (max-width: 900px) {
-  .QuoteBox {
-    width: var(--pageWidth2);
-  }
+@media screen and (max-width: 700px) {
   .logo {
     text-align: center;
-    width: var(--pageWidth2);
-    font-size: 50px;
+    width: calc(100vw - 2rem);
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: -1px;
-    line-height: 50px;
+    line-height: 30px;
+    text-align: center;
   }
   .logo h1 {
     margin: 43px 0px;
@@ -191,11 +190,11 @@ canvas {
   }
   /* quote */
   #text {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
   }
   #author {
     left: 0px;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .icon {
     font-size: 2rem;
